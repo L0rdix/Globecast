@@ -1,18 +1,18 @@
 /* Basic Styles */
 :root {
-    --bg_main: #0a1f44;
+    --bg_main: #36382E;
 
-    --text_light: #fff;
+    --text_light: #EDE6E3;
 
     --text_med: #53627c;
 
     --text_dark: #1e2432;
 
-    --red: #ff1e42;
+    --red: #F06449;
 
-    --darkred: #c3112d;
+    --darkred: #D22F0F;
 
-    --orange: #ff8c00;
+    --orange: #F06449;
 }
   
 * {
@@ -30,14 +30,42 @@ input {
     --webkit-appearance: none;
 }
   
-   
-  
 button,
 input {
     border: none;
     background: none;
     outline: none;
     color: inherit;
+}
+
+#weather-formBtn {
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 25rem;
+}
+   
+#weather-formBtn:hover {
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
   
 img {
@@ -60,9 +88,7 @@ body {
 
 /* Top Part */
 .top{
-
     color: var(--text_light);
-  
 }
   
 h1{
@@ -76,69 +102,29 @@ h1{
 }
   
 .top form {
-  
     position: relative;
-  
     display: flex;
-  
     align-items: center;
-  
+    flex-direction: column;
 }
   
 .top form input {
-  
     font-size: 2rem;
-  
     height: 40px;
-  
     padding: 5px 5px 10px;
-  
     border-bottom: 1px solid;
-  
 }
   
 .top form input::placeholder {
-  
     color: currentColor; 
-  
-}
-  
-.top button {
-  
-    font-size: 1rem;
-  
-    font-weight: bold;
-  
-    letter-spacing: 0.1em;
-  
-    padding: 15px 20px;
-  
-    margin-left: 15px;
-  
-    border-radius: 5px;
-  
-    background: var(--red);
-  
-    transition: background 0.3s ease-in-out;
-  
-}
-  
-.top form button:hover {
-    background: var(--darkred);
 }
   
 .top form .msg {
-  
     position: absolute;
-  
     bottom: -40px;
-  
     left: 0;
-  
     max-width: 450px;
-  
     min-height: 40px;
-  
 }
   
 @media screen and (max-width: 700px) {
@@ -148,23 +134,18 @@ h1{
       flex-direction: column;
     }
   
-    
-  
     .top form input,
-  
-    .top form button {
+    #weather-formBtn {
   
       width: 100%;
   
     }
   
-    .top form button {
+    #weather-formBtn {
   
       margin: 20px 0 0 0;
   
     }
-  
-    
   
     .top form .msg {
   
@@ -183,18 +164,16 @@ h1{
 
 /* Bottom Styles */
 .bottom {
-
-    margin: 50px 0 20px;
-  
+    margin: 1.875rem 0 1.25rem;
 }
   
 .bottom #cities {
   
     display: grid;
   
-    grid-gap: 32px 20px;
+    grid-gap: 2rem 1.25rem;
   
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   
 }
   
@@ -205,7 +184,7 @@ h1{
       grid-template-columns: repeat(3, 1fr);
   
     }
-  
+    
 }
   
 @media screen and (max-width: 700px) {
@@ -215,6 +194,11 @@ h1{
       grid-template-columns: repeat(2, 1fr);
   
     }
+
+    
+    #error-msg{
+        margin-top: 1.5rem;
+    }
   
 }
   
@@ -223,9 +207,13 @@ h1{
     .bottom #cities {
   
       grid-template-columns: repeat(1, 1fr);
-  
+        
     }
-  
+
+    #error-msg{
+        margin-top: 1.5rem;
+    }
+    
 }
 
 /* Cards */
@@ -240,7 +228,7 @@ h1{
     background: var(--text_light);
   
     color: var(--text_med);
-  
+    width: 15rem;
 }
   
 .bottom .city::after {
@@ -308,15 +296,26 @@ h1{
 }
   
 .bottom .city-icon {
-  
     margin-top: 10px;
-  
     width: 100px;
-  
     height: 100px;
-  
 }
   
-  
-  
-  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#name{
+    font-size: 6rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#inputField{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}

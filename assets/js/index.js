@@ -31,7 +31,7 @@ function GetWeather(){
       });
   
       if(arrayFilter.length > 0){
-        errorMsg.innerHTML = `You already know the weather for ${arrayFilter[0].querySelector(".city-name span").textContent}...otherwise be more specific by providing the country code as well 😉`;
+        errorMsg.innerHTML = `You already know the weather for ${arrayFilter[0].querySelector(".city-name span").textContent}. Try searching for another city or provide a country code.`;
         inputElement.value = "";
         return;
       }

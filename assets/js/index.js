@@ -7,7 +7,7 @@ const apiKey = window.API_KEY;
 function GetWeather(){
   let inputVal = inputElement.value;
 
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=${apiKey}&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
     const icon = `https://openweathermap.org/img/wn/${data.weather[0]["icon"]}@2x.png`;

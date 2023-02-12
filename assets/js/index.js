@@ -2,10 +2,12 @@ let inputElement = document.querySelector('[data-input]');
 const list = document.getElementById('cities');
 const errorMsg = document.getElementById('error-msg');
 
+const apiKey = window.API_KEY;
+
 function GetWeather(){
   let inputVal = inputElement.value;
 
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=692aecf0eca12b1e8b1b72c5e62db76f&units=metric`)
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=${apiKey}&units=metric`)
   .then(response => response.json())
   .then(data => {
     const icon = `https://openweathermap.org/img/wn/${data.weather[0]["icon"]}@2x.png`;
@@ -59,7 +61,6 @@ function GetWeather(){
     errorMsg.innerHTML = "Enter a valid city.";
   });
 }
-
 
 const formBtn = document.getElementById('weather-formBtn');
 formBtn.addEventListener('click', e => {

@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get accurate and up-to-date weather information for any city around the world with Globecast. Easily compare weather conditions in multiple cities and plan your travels accordingly.">
-
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/clear-sky.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Globecast</title>
-</head>
-<body>
-    <section class="top">
+    <meta name="title" content="Globecast" />
+    <meta
+      name="description"
+      content="Get accurate and up-to-date weather information for any city around the world with Globecast. Easily compare weather conditions in multiple cities and plan your travels accordingly."
+    />
 
-        <div class="container">
-          <h1 id="name">Globecast</h1>
-      
-          <form>
-            <input id="inputField" type="text" placeholder="Search for a city" autofocus data-input>
-         
-            <button id="weather-formBtn" type="submit">SUBMIT</button>
-          </form>
-          <span id="error-msg"></span>
-          
-        </div>
-      
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/clear-sky.png" />
+  </head>
+  <body>
+    <section class="top">
+      <div class="container">
+        <h1 id="name">Globecast</h1>
+
+        <form>
+          <input
+            id="inputField"
+            type="text"
+            placeholder="Search for a city"
+            autofocus
+            data-input
+          />
+
+          <button id="weather-formBtn" type="submit">SUBMIT</button>
+        </form>
+        <span id="error-msg"></span>
+      </div>
     </section>
-      
+
     <section class="bottom">
-      
-        <div class="container">
-      
-          <ul id="cities">
-          </ul>
-      
-        </div>
-      
+      <div class="container">
+        <ul id="cities"></ul>
+      </div>
     </section>
+
     <script src="assets/js/index.js"></script>
-</body>
+  </body>
 </html>

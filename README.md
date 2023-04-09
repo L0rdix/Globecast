@@ -10,4 +10,4 @@ Globecast can be used to get the temperature and the weather of a certain city o
 
 You can access Globecast [here](https://l0rdix.github.io/Globecast/).
 
-![](./screenshot.png)
+![](./assets/img/screenshot.png)
